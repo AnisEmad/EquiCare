@@ -12,8 +12,6 @@ class AddHorse extends StatefulWidget {
 }
 
 class _AddHorseState extends State<AddHorse> {
-  var _taskController;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

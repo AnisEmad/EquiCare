@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:final_project/Models/grid_item_model.dart';
 
 class ProfileViewBody extends StatelessWidget {
   const ProfileViewBody({super.key});
