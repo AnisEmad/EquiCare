@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:final_project/Screens/add_horse.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -56,7 +56,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   Text(
                     'SIGN IN',
                     style: GoogleFonts.robotoCondensed(
-                      color: Color(0xFFFFA726),
+                      color: const Color(0xFFFFA726),
                       fontSize: 40,
                       fontWeight: FontWeight.bold,
                     ),
@@ -66,7 +66,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   Text(
                     'Welcome back nice to see you again :-)',
                     style: GoogleFonts.robotoCondensed(
-                      color: Color(0xFFE0E0E0),
+                      color: const Color(0xFFE0E0E0),
                       fontSize: 18,
                     ),
                   ),
@@ -122,20 +122,28 @@ class _LoginScreenState extends State<LoginScreen> {
                   // Sign In Button
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 25),
-                    child: Container(
-                      padding: const EdgeInsets.all(16),
-                      decoration: BoxDecoration(
-                        color: const Color(0xFFE4AB6E),
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: Center(
-                        child: Text(
-                          'Sign in',
-                          style: GoogleFonts.robotoCondensed(
-                            color:
-                                const Color(0xFF4A3824), // Vibrant and thematic
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const AddHorse()),
+                        );
+                      },
+                      child: Container(
+                        padding: const EdgeInsets.all(16),
+                        decoration: BoxDecoration(
+                          color: const Color(0xFFE4AB6E),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Center(
+                          child: Text(
+                            'Sign in',
+                            style: GoogleFonts.robotoCondensed(
+                              color: const Color(0xFF4A3824),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                            ),
                           ),
                         ),
                       ),
